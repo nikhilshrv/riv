@@ -11,10 +11,12 @@ import { AuthService } from '../../shared/services/auth.service';
 export class LoginComponent implements OnInit {
 
 
-    kiteLink = 'https://kite.trade/connect/login?v=3&api_key=2ecedw57getitz4a';
+
+    // kiteLink = 'https://kite.trade/connect/login?v=3&api_key=2ecedw57getitz4a';
 
     constructor(
-        private auth: AuthService
+        private auth: AuthService,
+
     ) { }
 
 
@@ -34,8 +36,9 @@ export class LoginComponent implements OnInit {
     onLogin() {
         console.log('On login called');
         this.auth.login().subscribe(
-            (data) => {
+            (data: any) => {
                 console.log('The data received is: ', data);
+                window.location.href = data.url;
             }, (err) => {
                 console.log('The err is: ', err);
             }
@@ -43,4 +46,6 @@ export class LoginComponent implements OnInit {
     }
 }
 
+
+// http://localhost:8080/api/login/redirect
 

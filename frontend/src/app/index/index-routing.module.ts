@@ -1,10 +1,16 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-
+import { IndexComponent } from './index.component';
 const routes: Routes = [
     {
         path: '',
-        loadChildren: './dash/dash.module#DashModule'
+        component: IndexComponent,
+        children: [
+            {
+                path: 'profile',
+                loadChildren: './dash/dash.module#DashModule'
+            }
+        ]
 
     }
 ];

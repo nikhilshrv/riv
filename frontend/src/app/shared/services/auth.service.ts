@@ -8,17 +8,19 @@ import { HttpClient } from '@angular/common/http';
 export class AuthService {
 
 
-    //   config = new Config();
+    config = new Config();
     url: any;
     constructor(
         private http: HttpClient
     ) {
-        //   this.url = this.config.SERVER_URL;
-        this.url = 'https://kite.trade/connect/login?v=3&api_key=2ecedw57getitz4a';
+        // this.url = this.config.SERVER_URL + '/login';
+        // this.url = 'https://kite.trade/connect/login?v=3&api_key=2ecedw57getitz4a';
+
 
     }
 
     login() {
-        return this.http.get(`${this.url}`);
+        console.log('In auth service ');
+        return this.http.get(`http://localhost:8080/login`);
     }
 }

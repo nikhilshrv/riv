@@ -1,42 +1,7 @@
-<!-- <div class="example-container">
-
-    <mat-form-field>
-        <input matInput placeholder="Enter your email" [formControl]="email" required>
-        <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
-    </mat-form-field>
-
-    <mat-form-field>
-        <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'">
-        <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-    </mat-form-field>
-</div> -->
-
-
 <mat-card>
 
-    <mat-card-title>Login</mat-card-title>
+  <mat-card-title>Login</mat-card-title>
 
-     <mat-card-actions>A 1</mat-card-actions>
-    <a href={{kiteLink}}>
-        <button mat-raised-button>Login With Kite</button>
-    </a>
-</mat-card>
-
-<mat-card>
-    <img src="#" class="mat-card-image" alt="Washed Out">
-    <mat-card-title>
-        <mat-card-title-text>
-            <span class="mat-headline">Vertical action buttons</span>
-        </mat-card-title-text>
-    </mat-card-title>
-    <mat-card-content>
-        <p>
-            The titles of Washed Out's breakthrough song and the first single from Paracosm share the two most important words in Ernest
-            Greene's musical language: feel it. It's a simple request, as well...
-        </p>
-    </mat-card-content>
-    <mat-card-actions layout="column" layout-align="start">
-        <mat-button>Action 1</mat-button>
-        <mat-button>Action 2</mat-button>
-    </mat-card-actions>
+  <mat-card-actions>A 1</mat-card-actions>
+  <button mat-raised-button (click)='onLogin()'>Login With Kite</button>
 </mat-card>
