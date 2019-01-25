@@ -13,6 +13,12 @@ app.use(cors(corsOptions));
 
 
 app.use(morgan('tiny'));
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Methods', 'GET,POST,DELETE');
+    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested With, Content-Type, Accept');
+    next();
+});
 
 
 
@@ -43,6 +49,7 @@ function subscribe() {
     ticker.subscribe(items);
     ticker.setMode(ticker.modeFull, items);
 }
+
 
 
 
