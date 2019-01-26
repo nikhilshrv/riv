@@ -58,7 +58,7 @@ router.get('/api/login/redirect', (req, res) => {
                 //     message: 'success',
                 //     data: resolve
                 // });
-                res.redirect(`http://localhost:4200/index?data=${encodeURIComponent(JSON.stringify(resolve))}`);
+                res.redirect(`http://localhost:4200/#/index?data=${encodeURIComponent(JSON.stringify(resolve))}`);
                 // res.status(200).send(resolve);
             },
             (reject) => {

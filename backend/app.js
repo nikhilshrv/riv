@@ -25,8 +25,11 @@ app.use((req, res, next) => {
 
 
 // Routes
-const login = require('./controllers/login/login');
+const login = require('./controllers/login');
 app.use('/', login);
+
+const funds = require('./controllers/funds');
+app.use('/funds', funds);
 
 
 //Ticker
