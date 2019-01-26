@@ -12,6 +12,7 @@ import { DashService } from '../dash.service';
 export class ProfileComponent implements OnInit {
 
     profile;
+    funds_data;
 
     constructor(
         private tokenService: TokenService,
@@ -26,20 +27,24 @@ export class ProfileComponent implements OnInit {
     }
 
     tabClick(event) {
-        console.log('Current tab is: ', event);
         if (event.index === 2) {
             console.log('Check for funds');
-            this.dashService.checkFunds().subscribe(
-                (data) => {
-                    console.log('Data is: ', data);
-                }, (err) => {
-                    console.log('Err is: ', err);
-                }
-            );
+            this.funds_data = undefined;
+            this.checkFunds();
         }
     }
 
+    checkFunds() {
+        this.dashService.checkFunds().subscribe(
+            (data) => {
+                console.log('Data is: ', data);
+                this.funds_data = data;
+            }, (err) => {
+                console.log('Err is: ', err);
+            }
+        );
+    }
     changeFocus(event) {
-        console.log('Current focus is: ', event);
+        // console.log('Current focus is: ', event);
     }
 }

@@ -1,18 +1,28 @@
 <section class="fund">
 
 
+  <div class="container-fluid">
 
-  <div class="row">
-    <div class="col-md-6">
-      <h2>
-        Funds
-      </h2>
-    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <h2>Equity</h2>
+        <div class="header">
+          <p>Status: <span>{{(equity?.enabled) ? 'Enabled' : 'Disabled'}}</span></p>
+          <p>Net Cash: <span>{{(equity?.net)}}</span></p>
+          <p>Available Cash: <span>{{(equity?.available.cash)}}</span></p>
+          <p>Available Margin: <span>{{(equity?.available.adhoc_margin)}}</span></p>
+        </div>
+      </div>
 
-    <div class="col-md-6">
-      <h2>
-        Commodity
-      </h2>
+      <div class="col-md-6">
+        <h2>Commodity</h2>
+        <div class="header">
+          <p>Status: <span>{{(commodity?.enabled) ? 'Enabled' : 'Disabled'}}</span></p>
+          <p>Net Cash: <span>{{(commodity?.net)}}</span></p>
+          <p>Available Cash: <span>{{(commodity?.available.cash)}}</span></p>
+          <p>Available Margin: <span>{{(commodity?.available.adhoc_margin)}}</span></p>
+        </div>
+      </div>
     </div>
   </div>
 

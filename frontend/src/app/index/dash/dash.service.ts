@@ -18,7 +18,6 @@ export class DashService {
     }
 
     checkFunds() {
-        console.log('In dash service');
         return this.http.get(`http://localhost:8080/funds/check?token=${this.profile.access_token}`);
     }
 }
