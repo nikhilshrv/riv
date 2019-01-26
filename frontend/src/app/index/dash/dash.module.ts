@@ -7,16 +7,17 @@ import { MatTabsModule, MatIconModule } from '@angular/material';
 import { FormsModule } from '@angular/forms';
 import { TickerComponent } from './ticker/ticker.component';
 import { DemoMaterialModule } from 'src/app/material-module';
+import { FundsComponent } from './funds/funds.component';
 
 @NgModule({
-    declarations: [ProfileComponent, TickerComponent],
+    declarations: [ProfileComponent, TickerComponent, FundsComponent],
     imports: [
         CommonModule,
         DashRoutingModule,
         MatTabsModule,
         FormsModule,
         MatIconModule,
-        DemoMaterialModule
+        DemoMaterialModule,
     ],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

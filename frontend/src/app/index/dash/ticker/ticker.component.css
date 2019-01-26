@@ -10,7 +10,7 @@ th {
   width: 25%;
 } 
 table {
-  width: 100%;
+  width: 30%;
 }
 
 tr.example-detail-row {
@@ -55,4 +55,21 @@ tr.example-element-row:not(.example-expanded-row):active {
 
 .example-element-description-attribution {
   opacity: 0.5;
+}
+
+.bg-n {
+    background: none;
+}
+
+.example-container {
+  height: calc(100vh - 200px);
+  overflow: auto;
+}
+
+.w-30 {
+    width: 30%;
+}
+
+.fl-l {
+    float: left;
 }
