@@ -13,6 +13,7 @@ export class ProfileComponent implements OnInit {
 
     profile;
     funds_data;
+    holdings_data;
 
     constructor(
         private tokenService: TokenService,
@@ -37,7 +38,7 @@ export class ProfileComponent implements OnInit {
     checkFunds() {
         this.dashService.checkFunds().subscribe(
             (data) => {
-                console.log('Data is: ', data);
+                console.log('Data is in check for funds is: ', data);
                 this.funds_data = data;
             }, (err) => {
                 console.log('Err is: ', err);
@@ -46,5 +47,16 @@ export class ProfileComponent implements OnInit {
     }
     changeFocus(event) {
         // console.log('Current focus is: ', event);
+    }
+
+    checkHoldings() {
+        this.dashService.checkHoldings().subscribe(
+            (data) => {
+                console.log('Data is in holding call is: ', data);
+                this.holdings_data = data;
+            }, (err) => {
+                console.log('Err is: ', err);
+            }
+        );
     }
 }

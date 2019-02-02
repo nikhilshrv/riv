@@ -20,4 +20,8 @@ export class DashService {
     checkFunds() {
         return this.http.get(`http://localhost:8080/funds/check?token=${this.profile.access_token}`);
     }
+
+    checkHoldings() {
+        return this.http.get(`http://localhost:8080/holdings/check?token=${this.profile.access_token}`);
+    }
 }

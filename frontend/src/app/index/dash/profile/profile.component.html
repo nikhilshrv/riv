@@ -1,32 +1,40 @@
 <section class='profile'>
 
-  <h1>Hello, {{profile.user_name}}</h1>
+  <div class="titlebar">
+    <img src="../../../../assets/logo.svg" alt="">
+    <h1>Hello, {{profile.user_name}}</h1>
+    <br>
+  </div>
 
-  <mat-tab-group mat-stretch-tabs class="example-stretched-tabs mat-elevation-z4" mat-align-tabs="center" class='cl-w'
-    (selectedTabChange)="tabClick($event)" (focusChange)='changeFocus($event)'>
-    <mat-tab (click)='openTicker()'>
-      <ng-template mat-tab-label>
-        <mat-icon class="example-tab-icon">thumb_up</mat-icon>
-        Ticker
-      </ng-template>
-      <app-ticker></app-ticker>
-    </mat-tab>
+  <div class="content">
 
-    <mat-tab (click)='openHoldings()'>
-      <ng-template mat-tab-label>
-        <mat-icon class="example-tab-icon">thumb_up</mat-icon>
-        Holdings
-      </ng-template>
-      Content 2
-    </mat-tab>
+    <mat-tab-group mat-stretch-tabs class="example-stretched-tabs mat-elevation-z4" mat-align-tabs="center" class='cl-w'
+      (selectedTabChange)="tabClick($event)" (focusChange)='changeFocus($event)'>
+      <mat-tab (click)='openTicker()'>
+        <ng-template mat-tab-label>
+          <mat-icon class="example-tab-icon">thumb_up</mat-icon>
+          Ticker
+        </ng-template>
+        <app-ticker></app-ticker>
+      </mat-tab>
 
-    <mat-tab>
-      <ng-template mat-tab-label>
-        <mat-icon class="example-tab-icon">thumb_up</mat-icon>
-        Funds
-      </ng-template>
+      <mat-tab (click)='openHoldings()'>
+        <ng-template mat-tab-label>
+          <mat-icon class="example-tab-icon">thumb_up</mat-icon>
+          Holdings
+        </ng-template>
+        <app-holdings></app-holdings>
+      </mat-tab>
 
-<app-funds *ngIf='(funds_data !== undefined)' [fundData]="funds_data"> </app-funds>
-    </mat-tab>
-  </mat-tab-group>
+      <mat-tab>
+        <ng-template mat-tab-label>
+          <mat-icon class="example-tab-icon">thumb_up</mat-icon>
+          Funds
+        </ng-template>
+
+        <app-funds *ngIf='(funds_data !== undefined)' [fundData]="funds_data"> </app-funds>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+
 </section>

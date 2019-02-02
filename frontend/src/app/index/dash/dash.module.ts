@@ -8,9 +8,10 @@ import { FormsModule } from '@angular/forms';
 import { TickerComponent } from './ticker/ticker.component';
 import { DemoMaterialModule } from 'src/app/material-module';
 import { FundsComponent } from './funds/funds.component';
+import { HoldingsComponent } from './holdings/holdings.component';
 
 @NgModule({
-    declarations: [ProfileComponent, TickerComponent, FundsComponent],
+    declarations: [ProfileComponent, TickerComponent, FundsComponent, HoldingsComponent],
     imports: [
         CommonModule,
         DashRoutingModule,

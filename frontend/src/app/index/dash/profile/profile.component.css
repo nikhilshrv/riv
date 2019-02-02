@@ -9,7 +9,7 @@
   -moz-animation: Gradient 15s ease infinite;
   animation: Gradient 15s ease infinite;
 }
-
+/* 
 @-webkit-keyframes Gradient {
   0% {
     background-position: 0% 50%
@@ -50,7 +50,7 @@
   100% {
     background-position: 0% 50%
   }
-}
+} */
 
 h1,
 h6 {
@@ -64,9 +64,23 @@ h6 {
 }
 
 .cl-w {
-    color: white
+    /* color: white */
 }
 
 .nav-tabs {
     border: none
+}
+
+.titlebar {
+    position: relative;
+}
+
+.titlebar h1 {
+    display: inline-block;
+    float: right;
+}
+
+.titlebar img {
+    width: 5%;
+    display: inline;
 }
